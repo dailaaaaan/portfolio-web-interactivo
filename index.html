@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dylan | Portafolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Dylan</h1>
+      <nav>
+        <ul>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#actividad">Actividad</a></li>
+          <li><button id="btnCV">Ver CV</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Desarrollador Web Full Stack</h2>
+        <p>Transformo ideas en soluciones digitales modernas.</p>
+      </div>
+    </section>
+
+    <section id="proyectos" class="container">
+      <h2>Mis Proyectos</h2>
+      <div id="repos" class="cards"></div>
+    </section>
+
+    <section id="actividad" class="container">
+      <h2>Actividad Reciente en GitHub</h2>
+      <ul id="commits"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Dylan. Todos los derechos reservados.</p>
+      <div class="social">
+        <a href="#">GitHub</a> | 
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modalCV" class="modal hidden">
+    <div class="modal-content">
+      <span id="cerrarModal">&times;</span>
+      <embed src="Curriculum Dylan Fiallos.pdf" type="application/pdf" width="100%" height="600px"/>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
