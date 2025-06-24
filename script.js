@@ -9,7 +9,7 @@ document.getElementById("cerrarModal").addEventListener("click", () => {
   document.getElementById("modalCV").classList.add("hidden");
 });
 
-// 2. Obtener y mostrar repos desde GitHub
+// Obtener y mostrar repos desde GitHub
 fetch(`https://api.github.com/users/${username}/repos`)
   .then(response => response.json())
   .then(repos => {
@@ -33,7 +33,7 @@ fetch(`https://api.github.com/users/${username}/repos`)
     document.getElementById("repos").innerHTML =
       "<p>No se pudieron cargar los proyectos. Verifica tu usuario.</p>";
   });
-// Obtener commits de los primeros 3 repos públicos
+// Obtener commits de los primeros 3 repos publicos
 fetch(`https://api.github.com/users/${username}/repos`)
   .then(response => response.json())
   .then(repos => {
