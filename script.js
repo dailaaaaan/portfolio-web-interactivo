@@ -33,3 +33,31 @@ fetch(`https://api.github.com/users/${username}/repos`)
     document.getElementById("repos").innerHTML =
       "<p>No se pudieron cargar los proyectos. Verifica tu usuario.</p>";
   });
+// Obtener commits de los primeros 3 repos públicos
+fetch(`https://api.github.com/users/${username}/repos`)
+  .then(response => response.json())
+  .then(repos => {
+    const commitsUl = document.getElementById("commits");
+    const primerosRepos = repos.slice(0, 3);
+
+    primerosRepos.forEach(repo => {
+      fetch(`https://api.github.com/repos/${username}/${repo.name}/commits`)
+        .then(res => res.json())
+        .then(commits => {
+          commits.slice(0, 1).forEach(commit => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+              <strong>${repo.name}</strong>: 
+              ${commit.commit.message} 
+              <em>(${new Date(commit.commit.author.date).toLocaleDateString()})</em>
+              <br>
+              <a href="${commit.html_url}" target="_blank">Ver commit ↗</a>
+            `;
+            commitsUl.appendChild(li);
+          });
+        })
+        .catch(err => {
+          console.error(`Error cargando commits de ${repo.name}`, err);
+        });
+    });
+  });
