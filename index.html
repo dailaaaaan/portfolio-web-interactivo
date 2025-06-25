@@ -6,7 +6,6 @@
   <title>Dylan | Portafolio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
 </head>
 <body>
   <header>
@@ -14,9 +13,15 @@
       <h1 class="logo">Dylan Andreu Fiallos Sanchez</h1>
       <nav>
         <ul>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#actividad">Actividad</a></li>
-          <li><button id="btnCV">Ver CV</button></li>
+          <li><a href="#proyectos" data-i18n="navProjects">Proyectos</a></li>
+          <li><a href="#actividad" data-i18n="navActivity">Actividad</a></li>
+          <li><button id="btnCV" data-i18n="btnCV">Ver CV</button></li>
+          <li>
+            <select id="languageSelector">
+              <option value="es">🇪🇸 ES</option>
+              <option value="en">🇬🇧 EN</option>
+            </select>
+          </li>
         </ul>
       </nav>
     </div>
@@ -25,25 +30,25 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h2>Desarrollador Web Full Stack</h2>
-        <p>Pequeño concepto de pagina web donde se muestran proyectos, commits y el CV.</p>
+        <h2 data-i18n="heroTitle">Desarrollador Web Full Stack</h2>
+        <p data-i18n="heroText">Pequeño concepto de pagina web donde se muestran proyectos, commits y el CV.</p>
       </div>
     </section>
 
     <section id="proyectos" class="container">
-      <h2>Mis Proyectos</h2>
+      <h2 data-i18n="projectsTitle">Mis Proyectos</h2>
       <div id="repos" class="cards"></div>
     </section>
 
     <section id="actividad" class="container">
-      <h2>Actividad Reciente en GitHub (Commits)</h2>
+      <h2 data-i18n="activityTitle">Actividad Reciente en GitHub (Commits)</h2>
       <ul id="commits"></ul>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>© 2025 Dylan. Todos los derechos reservados.</p>
+      <p>© 2025 Dylan. <span data-i18n="rights">Todos los derechos reservados.</span></p>
       <div class="social">
         <a href="#">GitHub</a> | 
         <a href="#">LinkedIn</a>

@@ -4,16 +4,15 @@
 
 Proyecto web tipo **landing page interactiva** que simula una pagina de presentación personal, con integración a la API de GitHub.
 
----
 
 ##  Funcionalidades principales
 
 - 🔍 Visualización dinámica de **proyectos públicos desde GitHub**.
 - 💬 Muestra de **commits recientes** automaticamente.
 - 📄 Visualizador de CV en **formato PDF** mediante modal interactivo.
+- 📄 Visualizador de CV en **formato PDF**, que **cambia según el idioma seleccionado**.
+- 🌍 Selector de idioma (🇪🇸 Español / 🇬🇧 Inglés) sin recarga.
 - 💡 Estilo moderno, responsive, minimalista y animaciones suaves.
-
----
 
 ##  Tecnologías utilizadas
 
@@ -23,20 +22,23 @@ Proyecto web tipo **landing page interactiva** que simula una pagina de presenta
 - Diseño responsive (Mobile First)
 - Fuentes de Google (Poppins)
 
----
+## 🌐 Soporte multilenguaje
+
+Este portafolio detecta el idioma seleccionado por el usuario (es/en) y aplica automáticamente:
+
+- Traducción dinámica de títulos, botones y textos clave.
+- Carga automática del CV en español o en inglés (`Curriculum Dylan Fiallos.pdf` / `Curriculum Dylan Fiallos - EN.pdf`).
+
+No se recarga la página, todo ocurre de forma fluida.
 
 ##  Estructura de carpetas
 
-```
 📁 portfolio-web-interactivo/
 ├── index.html
 ├── style.css
 ├── script.js
 ├── Curriculum Dylan Fiallos.pdf
 └── README.md
-```
-
----
 
 ##  Como ejecutarlo localmente
 
@@ -51,22 +53,16 @@ cd portfolio-web-interactivo
 
 Veras tu portafolio completamente funcional y dinamico.
 
----
-
 ##  Visualización online
 
-Este proyecto puede estar publicado en GitHub Pages:  
+Este proyecto esta publicado en GitHub Pages:  
 🔗 https://dailaaaaan.github.io/portfolio-web-interactivo
-
----
 
 ##  Autor
 
 - 👨‍💻 Dylan Andreu Fiallos Sánchez
 - 🌐 [GitHub](https://github.com/dailaaaaan)
 - 📧 Contacto: (dylanandreufiallos@gmail.com)
-
----
 
 ##  Licencia
 
